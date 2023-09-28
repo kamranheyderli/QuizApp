@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sniglet", cursive;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    img {
+        width: auto;
+        border-radius: 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://cdn.wallpapersafari.com/73/92/bhtLMx.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+
+    .quiz_container {
+        width: 35%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+        .quiz_header {
+            padding: 35px;
+            .info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                #question-number{
+                    font-size: 15px;
+                }
+            }
+           
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            li {
+                width: 100%;
+                label {
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+
+                input[type="radio"] {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    width: 17px;
+                    height: 17px;
+                    margin-right: 3px;
+                    border: 2px solid #333;
+                    border-radius: 50%;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: white; /* Tüm radio düymələrinin arxa fonu ağ olur */
+
+                    &:checked {
+                        background-color: green; /* Yalnızca seçilmiş radio düyməsinin arxa fonu yaşıl olur */
+                    }
+                }
+            }
+        }
+        .quiz_bottom {
+            .submit {
+                width: 100%;
+                border: none;
+                background-color: rgb(22, 148, 22);
+                font-size: 20px;
+                padding: 15px;
+                font-weight: 700;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+        .submit {
+            width: 100%;
+            border: none;
+            background-color: rgb(22, 148, 22);
+            font-size: 20px;
+            padding: 15px;
+            font-weight: 700;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .loader{
+        img{
+            width: 100%;
+        }
+    }
+     .container {
+        height: 100vh;
+        row-gap: 40px;
+        h1 {
+            font-size: 25px;
+        }
+        .quiz_container {
+            width: 90%;
+            padding: 5px;
+            
+            .quiz_header{
+                padding: 20px;
+                ul{
+                    li{
+                        label{
+                            font-size: 20px;
+                        }
+                        
+                    };
+                }
+            }
+        }
+    }
+}
