@@ -112,7 +112,33 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width:400px){
+    .container {
+        height: 100vh;
+        row-gap: 50px;
+        h1 {
+            font-size: 20px;
+        }
+        .quiz_container {
+            width: 90%;
+            
+            .quiz_header{
+                padding: 10px;
+                ul{
+                    li{
+                        label{
+                            font-size: 17px;
+                        }
+                        
+                    };
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:401px) and (max-width: 768px) {
     .loader{
         img{
             width: 100%;
@@ -142,3 +168,4 @@
         }
     }
 }
+

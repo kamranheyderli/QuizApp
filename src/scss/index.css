@@ -107,7 +107,25 @@
   border-radius: 0 0 10px 10px;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
+  .container {
+    height: 100vh;
+    row-gap: 50px;
+  }
+  .container h1 {
+    font-size: 20px;
+  }
+  .container .quiz_container {
+    width: 90%;
+  }
+  .container .quiz_container .quiz_header {
+    padding: 10px;
+  }
+  .container .quiz_container .quiz_header ul li label {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 768px) {
   .loader img {
     width: 100%;
   }
